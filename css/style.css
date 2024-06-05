@@ -1,0 +1,249 @@
+*{
+    font-family: "Roboto", sans-serif;
+}
+:root{
+    --main-color: #ff305b
+}
+nav{
+    z-index: 99999;
+}
+header{
+    background-image: url(../images/slider-01.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+header .layout{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.5);
+}
+.navbar-nav .nav-link{
+    color: white;
+}
+.navbar .navbar-brand,
+.header-title h1,
+#services i,
+.img-overlay i:hover,
+.navbar-nav .nav-item .active,
+.navbar-nav .nav-link:hover,
+#Portfolio .nav-item .active,
+.protiflio-item i,
+.sec-info i,
+footer span{
+    color: var(--main-color);
+}
+.header-title h5::after{
+    content: " ";
+    animation-name: ani;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+}
+@keyframes ani {
+    0%{content:" |"}
+    3%{content:" D |"}
+    6%{content:" De |"}
+    9%{content:" Des |"}
+    12%{content:" Desi |"}
+    15%{content:" Desig |"}
+    18%{content:" Design |"}
+    21%{content:" Designe |"}
+    24%{content:" Designer |"}
+    25%{content:" Designer |"}
+    26%{content:" Designer |"}
+    27%{content:" Designer |"}
+    28%{content:" Designe |"}
+    30%{content:" Design |"}
+    33%{content:" Desig |"}
+    36%{content:" Desi |"}
+    39%{content:" Des |"}
+    42%{content:" De |"}
+    45%{content:" D |"}
+    48%{content:" |"}
+    51%{content:" D |"}
+    54%{content:" De |"}
+    57%{content:" Dev |"}
+    60%{content:" Deve |"}
+    63%{content:" Devel |"}
+    66%{content:" Develo |"}
+    69%{content:" Develop |"}
+    72%{content:" Develope |"}
+    75%{content:" Developer |"}
+    78%{content:" Develope |"}
+    81%{content:" Develop |"}
+    84%{content:" Develo |"}
+    87%{content:" Devel |"}
+    90%{content:" Deve |"}
+    93%{content:" Dev |"}
+    96%{content:" De |"} 
+    98%{content:" D |"}
+    100%{content:" |"}
+}
+
+.img-overlay{
+    height: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.8s;
+    z-index: 999;
+    background-color: rgba(51, 51, 51,0.7);
+    
+}
+
+.img-profile:hover .img-overlay {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    color: white;
+    cursor: pointer;
+}
+.about-content h2{
+  text-indent: 1rem;
+}
+hr{
+    border-style: dashed;
+}
+.about-content h2::before{
+    content: "";
+    position: absolute;
+    height: 60%;
+    width: 4px;
+    left: 0;
+    top: 20%;
+    background-color: var(--main-color);
+}
+.about-content p{
+    line-height: 1.5rem;
+}
+.services-line{
+    background-color: var(--main-color);
+    height: 1px;
+    width: 150px;
+    margin: auto;
+    position: relative;
+    margin: 10px auto;
+}
+.services-line::before{
+    content: "";
+    background-color: var(--main-color);
+    height: 1px;
+    width: 75px;
+    position: absolute;
+    bottom: 7px;
+    left: 25%;
+}
+.services-line::after{
+    content: "";
+    background-color: var(--main-color);
+    height: 1px;
+    width: 75px;
+    position: absolute;
+    top: 7px;
+    left: 25%;
+}
+.services-item,
+.services-item i{
+    transition: 0.5s;
+}
+.services-item:hover{
+    background-color: white;
+   border-radius: 2%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) ;
+}
+.services-item:hover i{
+    transform: scale(1.2,1.2);
+}
+#Portfolio .nav-link,
+#Portfolio a{
+    color: black;
+    cursor: pointer;
+}
+.protiflio-item {
+    position: relative;
+}
+.protiflio-item:after  {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51,0.5);
+    opacity: 0;
+}
+ .protiflio-item:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    cursor: pointer;
+}
+ .protiflio-item a  {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    padding: 10px;
+    z-index: 644;
+    color: var(--main-color);
+    transition: 0.5s;
+    cursor: pointer;
+}
+ .protiflio-item:hover a {
+    opacity: 1;
+}
+#contact button{
+    background-color: var(--main-color);
+    color: white;
+}
+#contact input:focus,
+#contact textarea:focus{
+    border-color: var(--main-color);
+    box-shadow: none;
+}
+.carousel-indicators [data-bs-target]{
+    height: 10px;
+    width: 10px;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+}
+.carousel-indicators .active{
+    background-color: var(--main-color);
+
+}
+.carousel-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100px;
+    border-left-color: var(--main-color);
+    border-top-color: var(--main-color);
+    border-right-color: rgba(0, 0, 0,0);
+    border-bottom-color: rgba(0, 0, 0,0);
+    border-style: solid;
+    border-width: 100px;
+    z-index: 1;
+
+}
+.carousel-item .img-feedback{
+   z-index: 939;
+}
+#blog h4:hover,
+#blog a:hover,
+footer i:hover{
+    cursor: pointer;
+    color: var(--main-color);
+    transition: 0.5s;
+}
+
+@media  screen and  (max-width:600px){ 
+    .header-title h1{
+        font-size:2rem;
+    }
+   .carousel-inner,
+   #contact form{
+    width: 100% !important;
+   }
+}
